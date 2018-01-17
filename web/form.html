@@ -7,8 +7,9 @@
 </div>
 <form method="post" id="scouting-form" autocomplete="off">
   {{ form.csrf_token }}
-  <img src="static/custom/known.jpeg" id="logo" class = text-right></img>
-
+  <img src="static/custom/known.png" align = "left" id="logo" class></img>
+  <img src="static/custom/Jerry.gif" align = "middle" id="logo" class></img>
+  <img src="static/custom/known.png" align = "middle" id="logo" class></img>
   <div class="col-md-8 col-xs-8 text-right">
     {{ form.match_id }}
     {{ form.team_id }}
@@ -31,33 +32,32 @@
       <div class="col-md-6 col-xs-12">
       </div>
     </div>
-    
     <div class="row form-group">
-      {{ form.autonbreach_count }}
+      {{ form.autoncube_count }}
     </div>
     <div class="row">
-      {{ form.acf_breach }}
-      {{ form.arp_breach }}
-      {{ form.art_breach }}
+      {{ form.cross_line }}
+      {{ form.ci_switch }}
+      {{ form.ci_scale }}
   </div>
   <div class="game-period">
     <h3>Teleop</h3>
     
     <div class="row form-group">
-      {{ form.breach_count }}
+      {{ form.cube_count }}
     </
     </div>
     <div class="row">
     </div>
      <div class="row">
-      {{ form.high_scores }}
+      {{ form.cube_switch }}
      </div>
     <div class="row">
-      {{ form.high_misses }}
+      {{ form.cube_scale }}
       {{ form.fouls }}
     </div>
     <div class="row">
-      {{ form.low_scores }}
+      {{ form.cube_vault }}
        {{ form.tech_fouls }}
     </div>
     <br>
@@ -79,8 +79,10 @@
     <h3>End Game</h3>
   </div>
   <div class="row">
-    {{ form.defense_timing }}
+    {{ form.endgame_action }}
   </div>
+   <div class="row">
+   {{ form.helping_robot}}
   <div class="row">
     <div class="col-md-3 col-xs-12">
       <h3>Comments</h3>
@@ -94,5 +96,8 @@
   <div class="row">
     <div class="col-md-4"><input type="submit" class="btn btn-primary" value="Save"></div>
   </div>
+  <script>
+        $('.content').css('background','linear-gradient(to bottom, rgba(255,44,40,1) 0%,rgba(255,128,0,1) 17%,rgba(255,246,0,1) 34%,rgba(0,170,0,1) 50%,rgba(0,219,201,1) 66%,rgba(43,0,216,1) 83%,rgba(165,46,121,1) 100%)');
+  </script>
 </form>
 {% endblock %}
