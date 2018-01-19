@@ -13,6 +13,13 @@ $(function() {
 		else if ($('#comments').val().toLowerCase().indexOf("jerry") != -1){
 			$('img:nth(0)').attr('src', '/static/custom/Jerry.gif')
 		}
+		else if ($('#comments').val().toLowerCase().indexOf("water game") != -1){
+			$('img:nth(0)').attr('src', '/static/custom/watergame.png')
+		}
+		else if ($('#comments').val().toLowerCase().indexOf("swerve") != -1){
+			$('img:nth(0)').attr('src', '/static/custom/swerve.jpg')
+			$('img:nth(0)').attr(width = 400)
+		}
 		else {
 			$('img:nth(0)').attr('src', '/static/custom/known.png')
 		}
