@@ -15,21 +15,15 @@ class Form(flask_wtf.Form):
 
     #Breaching checkboxes Auton
     cross_line = CubeField('Cross line')
-    ci_switch = CubeField('Cube in Switch')
-    ci_scale = CubeField('Cube in Scale')
+    auton_ci_switch = CubeField('Cube in Switch')
+    auton_ci_scale = CubeField('Cube in Scale')
 
     #Other
-    autoncube_count = IntegerField('Number of cubes picked up', default=0,
-        col_md=6,
-        label_col_md=6,
-        col_sm=8,
-        label_col_sm=12)
+    auton_cube_count = IntegerField('Cubes picked up', default=0,
+        col_sm=6)
 
-    cube_count = IntegerField('Number of cubes picked up', default=0,
-        col_md=6,
-        label_col_md=6,
-        col_sm=8,
-        label_col_sm=12) 
+    cube_count = IntegerField('Cubes picked up', default=0,
+        col_sm=6)
     cube_switch = IntegerField('Cubes in Switch', default=0, col_sm=6)
     cube_scale = IntegerField('Cubes in Scale', default=0, col_sm=6)
     cube_vault = IntegerField('Cubes in Vault', default=0, col_sm=6)

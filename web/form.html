@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% block body %}
-<div class="row">
-  <div class="col-md-4 col-xs-4">
+  <div class="row">
+    <div class="col-md-4 col-xs-4">
     <h2>Scouting Form 2018 Power Up!</h2>
   </div>
-</div>
+    </div>
 <form method="post" id="scouting-form" autocomplete="off">
   {{ form.csrf_token }}
   <!-- <img src="static/custom/known.png" align = "left" id="logo" class></img> -->
@@ -32,23 +32,20 @@
       </div>
     </div>
     <div class="row form-group">
-      {{ form.autoncube_count }}
+      {{ form.auton_cube_count }}
     </div>
     <div class="row">
       {{ form.cross_line }}
-      {{ form.ci_switch }}
-      {{ form.ci_scale }}
+      {{ form.auton_ci_switch }}
+      {{ form.auton_ci_scale }}
   </div>
   <div class="game-period">
     <h3>Teleop</h3>
     
-    <div class="row form-group">
-      {{ form.cube_count }}
-    </
+    <div class="row">
+      {{form.cube_count}}
     </div>
     <div class="row">
-    </div>
-     <div class="row">
       {{ form.cube_switch }}
      </div>
     <div class="row">
@@ -80,8 +77,9 @@
   <div class="row">
     {{ form.endgame_action }}
   </div>
-   <div class="row">
-   {{ form.helping_robot}}
+  <div class="row">
+    {{ form.helping_robot}}
+  </div>
   <div class="row">
     <div class="col-md-3 col-xs-12">
       <h3>Comments</h3>
