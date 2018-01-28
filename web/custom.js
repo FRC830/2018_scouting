@@ -18,9 +18,11 @@ $(function() {
 		}
 		else if ($('#comments').val().toLowerCase().indexOf("swerve") != -1){
 			$('img:nth(0)').attr('src', '/static/custom/swerve.jpg')
+		else if 
 		}
 		else {
 			$('img:nth(0)').attr('src', '/static/custom/known.png')
+
 		}
 		
 	})

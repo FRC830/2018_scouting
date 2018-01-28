@@ -34,3 +34,5 @@ class Form(flask_wtf.Form):
 
     helping_robot = CheckboxButtonField('Robot Helped Another Robot', col_md=3)
     comments = TextAreaField('', col_lg=12)
+
+    
