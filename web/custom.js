@@ -36,14 +36,18 @@ $(function() {
         }
         var comments = $("#comments").val();
 		if(comments.length > 110){
-			alert("Achievement! You wrote an essay! \n\nCongratulations on finishing your short story entitled \"Comments\"");
+			alert("Achievement Get: \nReady Player One \nCongratulations on finishing your novel, \"Comments\".");
 		}
 		
         var match = $("#match_id").val();
         if (match == 1){
-            alert("Achievement Get: \n'We are Number One!' \n(scout the first match)");
-        }else if (match >= 81){
-            alert("Achievement Get: \n'Take the Red Pill' \n(break the matrix by scouting past match 80)");
+            alert("Achievement Get: \nWe are Number One! \n(scout the first match)");
+        }
+		else if (match == 80){
+			alert("Achievement Get: \nOur Princess is in Another Castle \n(reach the end of the competition)")
+		}
+        else if (match >= 81){
+            alert("Achievement Get: \nTake the Red Pill \n(break the matrix by scouting past match 80)");
         }
         var team = $("#team_id").val();
         if (team == 830){
@@ -53,9 +57,9 @@ $(function() {
         var scaleCubes = $("#cube_scale").val();
         var vaultCubes = $("#cube_vault").val();
         var cubesPickedUp = $("#cube_count").val();
-        if (switchCubes < 0 || scaleCubes < 0 || vaultCubes < 0 || cubesPickedUp < 0){
+        /*if (switchCubes < 0 || scaleCubes < 0 || vaultCubes < 0 || cubesPickedUp < 0){
             alert("Achievement Get: \nOur Princess is in Another Castle \n(score negative cubes)");
-        }
+        }*/
         if (switchCubes >= 100 || scaleCubes >= 100 || vaultCubes >= 100 || cubesPickedUp >= 100){
         	alert("Achievement Get: \n0 to 100 real quick \n(have more than 100 cubes in any field)");
         }
@@ -83,7 +87,7 @@ $(function() {
         	alert("Achievement Get: \nIt's super effective! \n(cross the line and score a cube in the scale during auton)");
         }
          if (autonLine && autonScale && autonSwitch){
-        	alert("Achievement Get: \nGotta go fast \n(cross the line,score a cube in the scale, AND score a cube in switch ALL DURING AUTON )");
+        	alert("Achievement Get: \nGotta go fast! \n(cross the line, score a cube in the scale, AND score a cube in the switch ALL DURING AUTON )");
         }
         if ($('#comments').val().toLowerCase().indexOf("deactivate") != -1 || $('#comments').val().toLowerCase().indexOf("disable") != -1){
 			alert("Achievement Get: \nYou Have Died of Dysentery \n(have a robot become disabled)");
