@@ -59,15 +59,37 @@ $(function() {
         if (switchCubes >= 100 || scaleCubes >= 100 || vaultCubes >= 100 || cubesPickedUp >= 100){
         	alert("Achievement Get: \n0 to 100 real quick \n(have more than 100 cubes in any field)");
         }
+        if (vaultCubes == 9){
+        	alert("Achievement Get: \nInto the Nether \n(fill the vault completely)");
+        }
+        if (switchCubes + scaleCubes == 1){
+        	alert("Achievement Get: \nBut you rolled a One... \n(robot scores only one cube during a match)");
+        }
+        else if (switchCubes <= 1 && scaleCubes <= 1 && vaultCubes <= 1){
+        	alert("Achievement Get: \nBrought a Knife to a Gunfight \n(robot does nothing)");
+        }
         var techFouls =  parseInt($("#tech_fouls").val()) 
         var fouls = parseInt($("#fouls").val());
-        if (fouls >= 1 && techFouls >= 1){
-            alert("Achievement Get: \n The Cake is a Lie \n(get both a foul and a tech foul)");
+        if (fouls >= 2){
+            alert("Achievement Get: \nKamehamehaaaaa! \n(commit two or more fouls in a match)");
+        }
+        else if (techFouls >= 2){
+        	 alert("Achievement Get: \nIt's dangerous to go alone \n(get two or more tech fouls)");
         }
         var autonLine = $("#cross_line").prop('checked')
         var autonScale = $("#auton_ci_scale").prop('checked')
+        var autonSwitch = $("#auton_ci_switch").prop('checked')
         if (autonLine && autonScale){
-        	alert("Achievement Get: \n It's super effective! \n(cross the line and score a cube in the scale during auton)");
+        	alert("Achievement Get: \nIt's super effective! \n(cross the line and score a cube in the scale during auton)");
         }
-    });
-});
+         if (autonLine && autonScale && autonSwitch){
+        	alert("Achievement Get: \nGotta go fast \n(cross the line,score a cube in the scale, AND score a cube in switch ALL DURING AUTON )");
+        }
+        if ($('#comments').val().toLowerCase().indexOf("deactivate") != -1 || $('#comments').val().toLowerCase().indexOf("disable") != -1){
+			alert("Achievement Get: \nYou Have Died of Dysentery \n(have a robot become disabled)");
+		}
+		if( team == 8675309){
+			alert("Achievement Get: \nI got your number, Jenny\n(Have a fake number!)")
+		}
+    })
+})
