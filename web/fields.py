@@ -10,18 +10,13 @@ class Form(flask_wtf.Form):
     match_id = IntegerField('Match ID', buttons=False)
     team_id = IntegerField('Team ID', buttons=False)
 
-    #Breaching checkboxes Teleop
-   	
-
-    #Breaching checkboxes Auton
+    #Auton
     cross_line = CubeField('Cross line')
     auton_ci_switch = CubeField('Cube in Switch')
     auton_ci_scale = CubeField('Cube in Scale')
-
-    #Other
     auton_cube_count = IntegerField('Cubes picked up', default=0,
         col_sm=6)
-
+    #Teleop
     cube_count = IntegerField('Cubes picked up', default=0,
         col_sm=6)
     cube_switch = IntegerField('Cubes in Switch', default=0, col_sm=6)
@@ -32,7 +27,7 @@ class Form(flask_wtf.Form):
 
     endgame_action = RadioField('What were they doing during endgame?', choices=[('0', 'Climbing'), ('1', 'Parking'), ('2', 'Neither')], default="2")
 
-    helping_robot = CheckboxButtonField('Robot Helped Another Robot', col_md=3)
+    helping_robot = CheckboxButtonField('Robot Helped Another Robot Climb', col_md=3)
     comments = TextAreaField('', col_lg=12)
 
     

@@ -19,8 +19,8 @@ $(function() {
 		else if ($('#comments').val().toLowerCase().indexOf("swerve") != -1){
 			$('img:nth(0)').attr('src', '/static/custom/swerve.jpg')
 		}
-			else if ($('#comments').val().toLowerCase().indexOf("up up down down left right left right b a start") != -1){
-			$('.content').css('background','/static/custom/Donkey_Kong.png')
+		else if ($('#comments').val().toLowerCase().indexOf("up up down down left right left right b a start") != -1){
+			$('img:nth(0)').attr('src','/static/custom/Donkey_Kong.png')
 		}
 		else {
 			$('img:nth(0)').attr('src', '/static/custom/known.png')
