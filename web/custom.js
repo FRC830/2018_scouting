@@ -36,7 +36,7 @@ $(function() {
         }
         var comments = $("#comments").val();
 		if(comments.length > 110){
-			alert("Achievement Get: \nReady Player One \nCongratulations on finishing your novel, \"Comments\".");
+			alert("Achievement Get: \nReady Player One.\nCongratulations on finishing your novel, \"Comments\".");
 		}
 		
         var match = $("#match_id").val();
@@ -44,14 +44,14 @@ $(function() {
             alert("Achievement Get: \nWe are Number One! \n(scout the first match)");
         }
 		else if (match == 80){
-			alert("Achievement Get: \nOur Princess is in Another Castle \n(reach the end of the competition)")
+			alert("Achievement Get: \nOur Princess is in Another Castle! \n(reach the end of the competition)")
 		}
         else if (match >= 81){
-            alert("Achievement Get: \nTake the Red Pill \n(break the matrix by scouting past match 80)");
+            alert("Achievement Get: \nTake the Red Pill. \n(break the matrix by scouting past match 80)");
         }
         var team = $("#team_id").val();
         if (team == 830){
-            alert("Achievement Get: \nRodents of Unusual Size \n(I don't believe they exist)");
+            alert("Achievement Get: \nRodents of Unusual Size. \n(I don't believe they exist)");
         }
         var switchCubes = $("#cube_switch").val();
         var scaleCubes = $("#cube_scale").val();
@@ -61,10 +61,10 @@ $(function() {
             alert("Achievement Get: \nOur Princess is in Another Castle \n(score negative cubes)");
         }*/
         if (switchCubes >= 100 || scaleCubes >= 100 || vaultCubes >= 100 || cubesPickedUp >= 100){
-        	alert("Achievement Get: \n0 to 100 real quick \n(have more than 100 cubes in any field)");
+        	alert("Achievement Get: \n0 to 100 real quick!!!! \n(have more than 100 cubes in any field)");
         }
         if (vaultCubes == 9){
-        	alert("Achievement Get: \nInto the Nether \n(fill the vault completely)");
+        	alert("Achievement Get: \nInto the Nether! \n(fill the vault completely)");
         }
         if (switchCubes + scaleCubes == 1){
         	alert("Achievement Get: \nBut you rolled a One... \n(robot scores only one cube during a match)");
@@ -78,8 +78,9 @@ $(function() {
             alert("Achievement Get: \nKamehamehaaaaa! \n(commit two or more fouls in a match)");
         }
         else if (techFouls >= 2){
-        	 alert("Achievement Get: \nIt's dangerous to go alone \n(get two or more tech fouls)");
+        	 alert("Achievement Get: \nIt's dangerous to go alone! \n(get two or more tech fouls)");
         }
+        var autonCubesPickedUp = $("#auton_cube_count")
         var autonLine = $("#cross_line").prop('checked')
         var autonScale = $("#auton_ci_scale").prop('checked')
         var autonSwitch = $("#auton_ci_switch").prop('checked')
@@ -90,10 +91,16 @@ $(function() {
         	alert("Achievement Get: \nGotta go fast! \n(cross the line, score a cube in the scale, AND score a cube in the switch ALL DURING AUTON )");
         }
         if ($('#comments').val().toLowerCase().indexOf("deactivate") != -1 || $('#comments').val().toLowerCase().indexOf("disable") != -1){
-			alert("Achievement Get: \nYou Have Died of Dysentery \n(have a robot become disabled)");
+			alert("Achievement Get: \nYou Have Died of Dysentery :)! \n(have a robot become disabled)");
 		}
 		if( team == 8675309){
-			alert("Achievement Get: \nI got your number, Jenny\n(Have a fake number!)")
-		}
-    })
+			alert("Achievement Get: \nI got your number, Jenny.\n(Have a fake number!)");
+        }
+        if(scaleCubes + switchCubes + vaultCubes < (cubesPickedUp + autonCubesPickedUp)){
+            alert("Achievement Get: \nMess with the best, you will lose like the rest! \n(pick up more cubes than cubes scored)");
+        }
+        if(scaleCubes +switchCubes + vaultCubes > (cubesPickedUp +autonCubesPickedUp)){
+            alert("Achievement Get: \nBack from the Future! \n(break the laws of mathematics. Usage of a Flux Capacitor is optional)");
+        }
+})
 })
