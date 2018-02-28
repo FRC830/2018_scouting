@@ -69,7 +69,7 @@ $(function() {
         if (switchCubes + scaleCubes == 1){
         	alert("Achievement Get: \nBut you rolled a One... \n(robot scores only one cube during a match)");
         }
-        else if (switchCubes <= 1 && scaleCubes <= 1 && vaultCubes <= 1){
+        else if (switchCubes < 1 && scaleCubes < 1 && vaultCubes < 1){
         	alert("Achievement Get: \nBrought a Knife to a Gunfight \n(robot does nothing)");
         }
         var techFouls =  parseInt($("#tech_fouls").val()) 
