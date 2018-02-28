@@ -21,6 +21,7 @@ $(function() {
 		}
 		else if ($('#comments').val().toLowerCase().indexOf("up up down down left right left right b a start") != -1){
 			$('img:nth(0)').attr('src','/static/custom/Donkey_Kong.png')
+            alert("SUPER ACHIEVEMENT GET: \nHacker! \n(Discover the cheat code!)");
 		}
 		else {
 			$('img:nth(0)').attr('src', '/static/custom/known.png')
@@ -29,7 +30,7 @@ $(function() {
 })
 var count = 0;
 $(function() {
-    $("#submit").click(function(){
+    $("#auton_ci_switch").click(function(){
         count++;
         if (count >= 3){
             $(".form-field").fadeOut(2000).fadeIn(2000);
@@ -102,5 +103,6 @@ $(function() {
         if(scaleCubes +switchCubes + vaultCubes > (cubesPickedUp +autonCubesPickedUp)){
             alert("Achievement Get: \nBack from the Future! \n(break the laws of mathematics. Usage of a Flux Capacitor is optional)");
         }
+
 })
 })
