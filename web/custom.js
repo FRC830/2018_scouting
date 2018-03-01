@@ -30,7 +30,13 @@ $(function() {
 })
 var count = 0;
 $(function() {
-    $("#auton_ci_switch").click(function(){
+
+	$("#team_id").keyup(function() {
+		if($(this).val() == 8675309){
+			alert("Achievement Get: \nI got your number, Jenny.\n(Have a fake number!)");
+        };
+	})
+    $("#auton_ci_switch").change(function(){
         count++;
         if (count >= 3){
             $(".form-field").fadeOut(2000).fadeIn(2000);
@@ -94,9 +100,7 @@ $(function() {
         if ($('#comments').val().toLowerCase().indexOf("deactivate") != -1 || $('#comments').val().toLowerCase().indexOf("disable") != -1){
 			alert("Achievement Get: \nYou Have Died of Dysentery :)! \n(have a robot become disabled)");
 		}
-		if( team == 8675309){
-			alert("Achievement Get: \nI got your number, Jenny.\n(Have a fake number!)");
-        }
+
         if(scaleCubes + switchCubes + vaultCubes < (cubesPickedUp + autonCubesPickedUp)){
             alert("Achievement Get: \nMess with the best, you will lose like the rest! \n(pick up more cubes than cubes scored)");
         }
