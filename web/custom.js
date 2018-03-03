@@ -30,7 +30,7 @@ $(function() {
 })
 var count = 0;
 $(function() {
-    $("#auton_ci_switch").click(function(){
+    $("#submit").click(function(){
         count++;
         if (count >= 3){
             $(".form-field").fadeOut(2000).fadeIn(2000);
